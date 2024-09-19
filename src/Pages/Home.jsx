@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Home() {
+  const [sidebar, setSidebar] = useState(false);
   return (
     <>
       <div className="sidebar-active">
@@ -10,8 +11,14 @@ function Home() {
             <h3>Simple, secure messaging for fast connect to world..!</h3>
           </div>
         </div> */}
-        <div className="chitchat-container sidebar-toggle">
-          <nav className="main-nav on custom-scroll">
+        <div
+          className={
+            sidebar
+              ? "chitchat-container on sidebar-toggle"
+              : "chitchat-container  sidebar-toggle"
+          }
+        >
+          <nav className="main-nav custom-scroll">
             <div className="logo-warpper">
               <a href="messenger.html">
                 <img src="../assets/images/logo/logo.png" alt="logo" />
@@ -141,6 +148,14 @@ function Home() {
                         <i className="ti-angle-right" />
                       </a>
                       <a
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (sidebar == true) {
+                            setSidebar(false);
+                          } else {
+                            setSidebar(true);
+                          }
+                        }}
                         className="icon-btn btn-outline-light button-effect pull-right mainnav"
                         href="#"
                       >
