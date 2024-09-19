@@ -148,16 +148,10 @@ function Home() {
                         <i className="ti-angle-right" />
                       </a>
                       <a
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (sidebar == true) {
-                            setSidebar(false);
-                          } else {
-                            setSidebar(true);
-                          }
-                        }}
+                  
                         className="icon-btn btn-outline-light button-effect pull-right mainnav"
                         href="#"
+                        onClick={(e)=>setSidebar(!sidebar)}
                       >
                         <i className="ti-layout-grid2" />
                       </a>
