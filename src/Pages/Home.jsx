@@ -15,12 +15,12 @@ function Home() {
           </div>
         </div> */}
         <div className="chitchat-container sidebar-toggle">
-          <LeftSidebar/>
-          <ChatList/>
-          <Chat/>
-          <RightSidebar/>
+          <LeftSidebar />
+          <ChatList />
+          <Chat />
+          <RightSidebar />
 
-  
+
 
         </div>
         <div
